@@ -1,0 +1,79 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{% extends 'adminindex.html' %}
+{% block body %}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+
+<body>
+<form action="/addedauthority" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table width="228" border="1" class="table table-dark">
+    <tr>
+      <th width="218" scope="row">Name 
+        <label>
+        
+      </label></th><td><input type="text" name="textfield" required pattern="[A-Z a-z.]{3,25}"/></td>
+    </tr>
+      <tr>
+      <th width="218" scope="row">Designation
+        <label>
+
+      </label></th><td><input type="text" name="textfield34" required pattern="[A-Z a-z.]{3,25}"/></td>
+    </tr>
+    <tr>
+      <th scope="row">Phone
+        <label>
+    
+      </label></th><td><input type="text" name="textfield2" required pattern="[6789][0-9]{9}" /></td>
+    </tr>
+    <tr>
+      <th scope="row">Place
+        <label>
+        
+      </label></th><td>
+        <input type="text" name="textfield3" required  pattern="[A-Z a-z.]{3,25}" />
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"><label>Email
+        
+      </label></th><td>
+        <input type="text" name="textfield6"  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}" />
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"><label>Image
+       
+      </label></th><td>
+        <input type="file" name="file" required  />
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Username
+        <label>
+
+      </label></th><td>
+        <input name="textfield5" type="text"  required  />
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Password
+        <label>
+
+      </label></th><td>
+        <input type="password" name="textfield4" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" />
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"><label>
+        <input type="submit" name="Submit" value="Add" class="btn btn-success" />
+      </label></th>
+    </tr>
+  </table>
+  <label></label>
+</form>
+</body>
+    {% endblock %}
+{#</html>#}

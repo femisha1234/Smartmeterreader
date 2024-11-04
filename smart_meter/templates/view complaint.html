@@ -1,0 +1,46 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{% extends 'authorityindex.html'%}
+{% block body %}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+
+<body>
+<form id="form1" name="form1" method="post" action="searchviewcomplaint#about">
+
+<table width="200" border="1" class="table table-dark">
+   <tr>
+        <th colspan="1" scope="col">Date</th>
+<td colspan="1">
+          <input type="date" name="textfield" value="date" class="form-control"/> </td>
+        <td>
+        <input type="submit" name="Submit" value="Search" class="btn btn-success" />
+        </td><td colspan="1"></td>
+    </tr>
+  <tr>
+    <th scope="col">Username</th>
+    <th scope="col">Date</th>
+    <th scope="col">Complaint</th>
+    <th scope="col">Reply</th>
+  </tr>
+                        {% for i in val %}
+
+  <tr>
+    <td><label>{{ i.USER.Name }}</label></td>
+    <td><label>{{ i.Date }}</label></td>
+    <td><label>{{ i.Complaint }}<br />
+      <br />
+      <br />
+      <br />
+    </label></td>
+    <td><p><a href="/sendreply">Reply</a></p>
+        </td>
+  </tr>
+                    {% endfor %}
+
+</table>
+</body>
+{#</html>#}
+{% endblock %}

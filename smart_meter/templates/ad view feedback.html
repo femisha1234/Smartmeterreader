@@ -1,0 +1,43 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{% extends 'authorityindex.html'%}
+{% block body %}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+
+<body>
+<form id="form1" name="form1" method="post" action="searchdate#about">
+  <table width="200" border="1" class="table table-dark">
+     <tr>
+        <th colspan="1" scope="col">Date</th>
+<td colspan="1">
+          <input type="date" name="textfield" value="date" class="form-control"/> </td>
+        <td>
+        <input type="submit" name="Submit" value="Search" class="btn btn-success" />
+        </td><td colspan="1"></td>
+    </tr>
+    <tr>
+      <th scope="col">Username</th>
+      <th scope="col">Feedback</th>
+      <th scope="col">Date</th>
+        <th></th>
+    </tr>
+      {% for i in val %}
+    <tr>
+      <td><p>{{  i.USER.Name}}</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p></td>
+      <td>&nbsp;{{ i.Feedback }}</td>
+      <td>&nbsp;{{ i.Date }}</td>
+    <td>
+
+    </td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+</body>
+{#</html>#}
+{% endblock %}

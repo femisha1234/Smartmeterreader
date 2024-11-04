@@ -1,0 +1,68 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{% extends 'authorityindex.html' %}
+{% block body %}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+
+<body>
+<form id="form1" name="form1" method="post" action="/addedbill">
+  <table width="228" border="1" class="table table-dark">
+    <tr>
+      <th width="218" scope="row">Username
+        <label>
+    
+      </label></th><td> 
+        <select name="select">
+            {% for i in val  %}
+            <option value="{{ i.id }}">{{ i.Name }} {{ i.Lname }}</option>
+            {% endfor %}
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Unitused
+        <label>
+       
+        </label></th><td>
+          <input type="text" name="textfield2"  required pattern="[0-9"/>
+        </td>
+    </tr>
+    <tr>
+      <th scope="row">Reading
+        <label>
+     
+        </label></th><td>      <input type="text" name="textfield3" required pattern="[0-9"  />
+        </td>
+    </tr>
+
+    <tr>
+      <th scope="row"><label>Last date
+  
+      </label></th><td>
+        <input type="date" name="textfield" />
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Amount
+        <label>
+  
+        </label></th><td>
+          <input name="textfield5" type="textfield" pattern="[0-9" />
+        </td>
+    </tr>
+
+    <tr>
+      <th scope="row"><label>
+      <td>  <input type="submit" name="Submit" value="Add" class="btn btn-success" /> </td>
+      </label></th>
+    </tr>
+  </table>
+  <label></label>
+
+</form>
+</body>
+{% endblock %}
+{#</html>#}
